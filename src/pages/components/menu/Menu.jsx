@@ -5,12 +5,14 @@ import TextMedium from "../tipography/textMedium/TextMedium"
 import TextSmall from "../tipography/textSmall/TextSmall"
 import TextBig from "../tipography/textBig/TextBig"
 import MenuOptions from "../menuOptions/MenuOptions"
+import LogoutButton from "../buttons/LogoutButton"
 
 const Container = styled.div`
+    display: flex;
+    flex-direction: column;
     background-color: ${props => props.theme.colors.secondary};
     width: 383px;
     height: 100vh;
-    padding-top: 25px;
 `
 
 const LogoContainer = styled.div`
@@ -20,7 +22,7 @@ const LogoContainer = styled.div`
     width: 86%;
     margin-bottom: 20px;
     padding: 0 10px;
-    margin-left: 20px;
+    margin: 25px 0 0 20px;
 `
 
 const StyledX = styled.div`
@@ -83,6 +85,15 @@ const StyledNav = styled.nav`
     flex-direction: column;
 `
 
+const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 20px;
+`
+
 export default function Menu() {
     return(
         <Container>
@@ -117,6 +128,9 @@ export default function Menu() {
                 <MenuOptions src="/subscriptionIcon.png">Subscription</MenuOptions>
                 <MenuOptions src="/settingsIcon.png">Review settings</MenuOptions>
             </StyledNav>
+            <ButtonContainer>
+                <LogoutButton />
+            </ButtonContainer>
         </Container>
     )
 }
