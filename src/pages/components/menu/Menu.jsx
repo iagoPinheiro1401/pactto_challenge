@@ -117,16 +117,16 @@ export default function Menu() {
                 <TextMedium>Pactto member since 2024</TextMedium>
             </UserNameContainer>
             <StyledNav>
-                <MenuOptions src="/homeIcon.png">Home</MenuOptions>
-                <MenuOptions src="/chatIcon.png">Pacttos (Chats)</MenuOptions>
-                <MenuOptions src="/videosIcon.png">Items to review</MenuOptions>
-                <MenuOptions src="/webLinksIcon.png">Web links to created</MenuOptions>
-                <MenuOptions src="/personaIcon.png">Personal information</MenuOptions>
-                <MenuOptions src="/packagesIcon.png">Review packages for sale</MenuOptions>
-                <MenuOptions src="/pacttoPagesIcon.png">Pactto website</MenuOptions>
-                <MenuOptions src="/referenceIcon.png">Reference video library</MenuOptions>
-                <MenuOptions src="/subscriptionIcon.png">Subscription</MenuOptions>
-                <MenuOptions src="/settingsIcon.png">Review settings</MenuOptions>
+                <MenuOptions src="/homeIcon" path="/">Home</MenuOptions>
+                <MenuOptions src="/chatIcon">Pacttos (Chats)</MenuOptions>
+                <MenuOptions src="/videosIcon">Items to review</MenuOptions>
+                <MenuOptions src="/webLinksIcon">Web links to created</MenuOptions>
+                <MenuOptions src="/personaIcon">Personal information</MenuOptions>
+                <MenuOptions src="/packagesIcon">Review packages for sale</MenuOptions>
+                <MenuOptions src="/pacttoPagesIcon">Pactto website</MenuOptions>
+                <MenuOptions src="/referenceIcon">Reference video library</MenuOptions>
+                <MenuOptions src="/subscriptionIcon">Subscription</MenuOptions>
+                <MenuOptions src="/settingsIcon">Review settings</MenuOptions>
             </StyledNav>
             <ButtonContainer>
                 <LogoutButton />

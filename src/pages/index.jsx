@@ -1,8 +1,8 @@
-import Menu from "./components/menu/Menu"
-
 function HomePage () {
   return (
-    <Menu />
+    <div>
+      home Page
+    </div>
   )
 }
 
