@@ -7,11 +7,13 @@ import TextBig from "../tipography/textBig/TextBig"
 import MenuOptions from "../menuOptions/MenuOptions"
 import LogoutButton from "../buttons/LogoutButton"
 
+import { useMenu } from "@/contexts/MenuContext"
+
 const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: ${props => props.theme.colors.secondary};
-    width: 383px;
+    width: 500px;
     height: 100vh;
 `
 
@@ -95,11 +97,17 @@ const ButtonContainer = styled.div`
 `
 
 export default function Menu() {
+    const { isMenuOpen, toggleMenu } = useMenu()
+
+    if (!isMenuOpen) {
+        return null
+    }
+
     return(
-        <Container>
+        <Container isOpen={isMenuOpen}>
             <LogoContainer>
                 <img src="/pactto_logo.png"/>
-                <StyledX>
+                <StyledX onClick={toggleMenu}>
                     <X size={20} color="#faf9f9" weight="bold" />
                 </StyledX>
             </LogoContainer>

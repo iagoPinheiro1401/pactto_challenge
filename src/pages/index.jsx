@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { List } from "@phosphor-icons/react"
 
 import TextHuge from "@/components/tipography/textHuge/TextHuge"
 import TextBig from "@/components/tipography/textBig/TextBig"
@@ -7,11 +8,14 @@ import Status from "@/components/status/Status"
 import GreenButton from "@/components/buttons/GreenButton"
 import SearchBar from "@/components/searchBar/SearchBar"
 
+import { useMenu } from "@/contexts/MenuContext"
+
 const Container = styled.header`
   display: flex;
   gap: 40px;
   flex-direction: column;
   padding: 40px 30px;
+  width: 100%;
 `
 
 const StatusContainer = styled.div`
@@ -35,11 +39,24 @@ const UploadsContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1500px;
+  width: 100%;
   margin-top: 60px;
 `
 
+const StyledList = styled(List)`
+  cursor: pointer;
+  display: ${props => (props.show ? 'block' : 'none')};
+`
+
+const MenuAndTextContainer = styled.div`
+  display: flex;
+  gap: 5px;
+  align-items: center;
+`
+
 function HomePage () {
+  const { isMenuOpen, toggleMenu } = useMenu()
+
   return (
     <Container>
         <TextBig>Hey IAGO, welcome to Pactto!</TextBig>
@@ -67,7 +84,10 @@ function HomePage () {
         </StatusContainer>
         
         <UploadsContainer>
-          <TextHuge>My uploads</TextHuge>
+          <MenuAndTextContainer>
+            <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
+            <TextHuge>My uploads</TextHuge>
+          </MenuAndTextContainer>
           <GreenButton plus>UPLOAD NEW VIDEO</GreenButton>
         </UploadsContainer>
 

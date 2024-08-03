@@ -4,6 +4,8 @@ import { useRouter } from "next/router"
 
 import Menu from "@/components/menu/Menu"
 
+import { MenuProvider } from "@/contexts/MenuContext"
+
 const GlobalStyle = createGlobalStyle`
     * {
       padding: 0;
@@ -21,12 +23,14 @@ function App({ Component, pageProps }) {
   
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <GlobalStyle />
+    <MenuProvider>
       <div style={{ display: 'flex' }}>
         <Menu />
-        <Component {...pageProps} />
+          <Component {...pageProps} />
       </div>
-    </ThemeProvider>
+    </MenuProvider>
+  </ThemeProvider>
   )
 }
 
