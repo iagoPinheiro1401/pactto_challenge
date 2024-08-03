@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-import TextHuge from "./components/tipography/textHuge/TextHuge"
-import TextBig from "./components/tipography/textBig/TextBig"
-import TextMedium from "./components/tipography/textMedium/TextMedium"
-import Status from "./components/status/Status"
-import GreenButton from "./components/buttons/GreenButton"
-import SearchBar from "./components/searchBar/SearchBar"
+import TextHuge from "@/components/tipography/textHuge/TextHuge"
+import TextBig from "@/components/tipography/textBig/TextBig"
+import TextMedium from "@/components/tipography/textMedium/TextMedium"
+import Status from "@/components/status/Status"
+import GreenButton from "@/components/buttons/GreenButton"
+import SearchBar from "@/components/searchBar/SearchBar"
 
 const Container = styled.header`
   display: flex;

@@ -2,7 +2,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components"
 import theme from "@/theme"
 import { useRouter } from "next/router"
 
-import Menu from "./components/menu/Menu"
+import Menu from "@/components/menu/Menu"
 
 const GlobalStyle = createGlobalStyle`
     * {
