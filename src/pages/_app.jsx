@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
       font-family: 'Roboto', sans-serif;
+      background-color: ${props => props.theme.colors.primary};
     }
 `
 
