@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import TextHude from "./components/tipography/textHude/TextHude"
+import TextHuge from "./components/tipography/textHuge/TextHuge"
 import TextBig from "./components/tipography/textBig/TextBig"
 import TextMedium from "./components/tipography/textMedium/TextMedium"
 import Status from "./components/status/Status"
@@ -66,7 +66,7 @@ function HomePage () {
         </StatusContainer>
         
         <UploadsContainer>
-          <TextHude>My uploads</TextHude>
+          <TextHuge>My uploads</TextHuge>
           <GreenButton plus>UPLOAD NEW VIDEO</GreenButton>
         </UploadsContainer>
     </Container>
