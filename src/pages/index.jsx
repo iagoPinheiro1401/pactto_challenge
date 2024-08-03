@@ -1,8 +1,10 @@
 import styled from "styled-components"
 
+import TextHude from "./components/tipography/textHude/TextHude"
 import TextBig from "./components/tipography/textBig/TextBig"
 import TextMedium from "./components/tipography/textMedium/TextMedium"
 import Status from "./components/status/Status"
+import GreenButton from "./components/buttons/GreenButton"
 
 const Container = styled.header`
   display: flex;
@@ -26,6 +28,14 @@ const StatusAndText = styled.div`
 const Hiperlink = styled.a`
   text-decoration: underline;
   color: ${props => props.theme.colors.green};
+`
+
+const UploadsContainer = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1500px;
+  margin-top: 60px;
 `
 
 function HomePage () {
@@ -55,6 +65,10 @@ function HomePage () {
           </StatusAndText>
         </StatusContainer>
         
+        <UploadsContainer>
+          <TextHude>My uploads</TextHude>
+          <GreenButton plus>UPLOAD NEW VIDEO</GreenButton>
+        </UploadsContainer>
     </Container>
   )
 }
