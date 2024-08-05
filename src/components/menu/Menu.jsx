@@ -126,7 +126,7 @@ export default function Menu() {
             </UserNameContainer>
             <StyledNav>
                 <MenuOptions src="/homeIcon" path="/">Home</MenuOptions>
-                <MenuOptions src="/chatIcon">Pacttos (Chats)</MenuOptions>
+                <MenuOptions src="/chatIcon" path="/chat">Pacttos (Chats)</MenuOptions>
                 <MenuOptions src="/videosIcon">Items to review</MenuOptions>
                 <MenuOptions src="/webLinksIcon">Web links to created</MenuOptions>
                 <MenuOptions src="/personaIcon">Personal information</MenuOptions>
