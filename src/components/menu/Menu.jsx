@@ -7,7 +7,7 @@ import TextBig from "../tipography/textBig/TextBig"
 import MenuOptions from "../menuOptions/MenuOptions"
 import LogoutButton from "../buttons/LogoutButton"
 
-import { useMenu } from "@/contexts/MenuContext"
+import { useMenu } from "@/hooks/useMenu"
 
 const Container = styled.div`
     display: flex;

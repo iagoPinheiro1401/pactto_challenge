@@ -8,7 +8,7 @@ import Status from "@/components/status/Status"
 import GreenButton from "@/components/buttons/GreenButton"
 import SearchBar from "@/components/searchBar/SearchBar"
 
-import { useMenu } from "@/contexts/MenuContext"
+import { useMenu } from "@/hooks/useMenu"
 
 const Container = styled.header`
   display: flex;

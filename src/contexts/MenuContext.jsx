@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react"
+import { createContext, useState } from "react"
 
 const MenuContext = createContext()
 
@@ -16,6 +16,4 @@ export function MenuProvider({ children }) {
   )
 }
 
-export function useMenu() {
-  return useContext(MenuContext)
-}
+export default MenuContext
