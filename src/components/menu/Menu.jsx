@@ -4,7 +4,7 @@ import { X } from "@phosphor-icons/react"
 import TextMedium from "../tipography/textMedium/TextMedium"
 import TextSmall from "../tipography/textSmall/TextSmall"
 import TextBig from "../tipography/textBig/TextBig"
-import MenuOptions from "../menuOptions/MenuOptions"
+import MenuOptions from "./MenuOptions"
 import LogoutButton from "../buttons/LogoutButton"
 
 import { useMenu } from "@/hooks/useMenu"
