@@ -129,7 +129,7 @@ export default function Menu() {
                 <MenuOptions src="/chatIcon" path="/chat">Pacttos (Chats)</MenuOptions>
                 <MenuOptions src="/videosIcon" path="/itemsToReview">Items to review</MenuOptions>
                 <MenuOptions src="/webLinksIcon" path="/webLinks">Web links to created</MenuOptions>
-                <MenuOptions src="/personaIcon">Personal information</MenuOptions>
+                <MenuOptions src="/personaIcon" path="/personalInformation">Personal information</MenuOptions>
                 <MenuOptions src="/packagesIcon">Review packages for sale</MenuOptions>
                 <MenuOptions src="/pacttoPagesIcon">Pactto website</MenuOptions>
                 <MenuOptions src="/referenceIcon">Reference video library</MenuOptions>
