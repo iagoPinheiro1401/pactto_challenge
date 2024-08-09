@@ -5,6 +5,7 @@ import ResetButton from "@/components/buttons/changesButtons/ResetButton"
 import SaveButton from "@/components/buttons/changesButtons/SaveButton"
 import Input from "@/components/input/Input"
 import Dropdown from "@/components/input/SelectInput"
+import Checkbox from "@/components/input/Checkbox"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -51,6 +52,15 @@ const InputsContainer = styled.div`
     gap: 25px;
 `
 
+const CheckboxContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 70px;
+    font-size: 16px;
+    color: white;
+`
+
 export default function PersonalInformation() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -70,6 +80,15 @@ export default function PersonalInformation() {
                     <Input placeholder="Email"/>
                     <Dropdown />
                 </InputsContainer>
+                <CheckboxContainer>
+                    <p>What is your main activity? Or activities</p>
+                    <Checkbox label="Video"/>
+                    <Checkbox label="Design"/>
+                    <Checkbox label="Development"/>
+                    <Checkbox label="Sports"/>
+                    <Checkbox label="Medical"/>
+                    <Checkbox label="Inspections"/>
+                </CheckboxContainer>
             </FormContainer>
         </Container>
     )
