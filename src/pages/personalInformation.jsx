@@ -61,6 +61,30 @@ const CheckboxContainer = styled.div`
     color: white;
 `
 
+const StyledInputOther = styled.input`
+  padding: 16px 40px 16px 14px;
+  font-size: 1rem;
+  border: 2px solid #706d6d;
+  border-radius: 3px;
+  width: 660px;
+  background-color: transparent;
+  color: white;
+
+  ::placeholder {
+    font-weight: 700;
+  }
+
+  :hover {
+    border-color: white;
+  }
+
+  &:focus {
+    caret-color: ${props => props.theme.colors.green};
+    border-color: ${props => props.theme.colors.green};
+    outline: none;
+  }
+`
+
 export default function PersonalInformation() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -88,6 +112,7 @@ export default function PersonalInformation() {
                     <Checkbox label="Sports"/>
                     <Checkbox label="Medical"/>
                     <Checkbox label="Inspections"/>
+                    <StyledInputOther placeholder="Other"/>
                 </CheckboxContainer>
             </FormContainer>
         </Container>
