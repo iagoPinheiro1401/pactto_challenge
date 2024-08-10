@@ -12,6 +12,7 @@ const Container = styled.header`
   flex-direction: column;
   padding: 40px 30px;
   width: 100%;
+  margin-left: ${props => props.isMenuOpen ? "400px" : "0"};
 `
 
 const SearchBarAndText = styled.div`
@@ -43,7 +44,7 @@ export default function ChatPage() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return(
-        <Container>
+        <Container isMenuOpen={isMenuOpen}>
             <MenuAndTextContainer>
                 <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
                 <TextHuge>Pacttos (Chats)</TextHuge>

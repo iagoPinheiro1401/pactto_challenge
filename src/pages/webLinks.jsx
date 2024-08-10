@@ -12,6 +12,7 @@ const Container = styled.header`
   flex-direction: column;
   padding: 40px 30px;
   width: 100%;
+  margin-left: ${props => props.isMenuOpen ? "400px" : "0"};
 `
 
 const TextAndSearch = styled.div`
@@ -35,7 +36,7 @@ export default function WebLinks() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return(
-        <Container>
+        <Container isMenuOpen={isMenuOpen}>
             <TextAndSearch>
                 <MenuAndTextContainer>
                     <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>

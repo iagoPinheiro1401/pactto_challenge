@@ -16,6 +16,7 @@ const Container = styled.header`
   flex-direction: column;
   padding: 40px 30px;
   width: 100%;
+  margin-left: ${props => props.isMenuOpen ? "400px" : "0"};
 `
 
 const StatusContainer = styled.div`
@@ -58,7 +59,7 @@ function HomePage () {
   const { isMenuOpen, toggleMenu } = useMenu()
 
   return (
-    <Container>
+    <Container isMenuOpen={isMenuOpen}>
         <TextBig>Hey IAGO, welcome to Pactto!</TextBig>
         <StatusContainer>
 

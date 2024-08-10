@@ -16,6 +16,7 @@ const Container = styled.div`
     flex-direction: column;
     width: 100%;
     padding: 110px 0 50px 0;
+    margin-left: ${props => props.isMenuOpen ? "390px" : "0"};
 `
 
 const ButtonsAndMenuContainer = styled.header`
