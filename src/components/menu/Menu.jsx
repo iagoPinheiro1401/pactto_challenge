@@ -13,8 +13,14 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: ${props => props.theme.colors.secondary};
-    width: 500px;
+    width: 390px;
     height: 100vh;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto; 
+
 `
 
 const LogoContainer = styled.div`

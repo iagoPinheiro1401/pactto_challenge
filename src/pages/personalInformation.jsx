@@ -14,6 +14,7 @@ const Container = styled.div`
     flex-direction: column;
     width: 100%;
     padding: 140px 0;
+    margin-left: ${props => props.isMenuOpen ? "500px" : "0"};
 `
 
 const ButtonsAndMenuContainer = styled.div`
@@ -25,6 +26,8 @@ const ButtonsAndMenuContainer = styled.div`
     padding: 20px 0 20px 30px;
     position: fixed;
     top: 0;
+    z-index: 10000;
+    background-color: ${props => props.theme.colors.primary};
 `
 
 const ButtonContainer = styled.div`
@@ -89,7 +92,7 @@ export default function PersonalInformation() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return(
-        <Container>
+        <Container isMenuOpen={isMenuOpen}>
             <ButtonsAndMenuContainer>
                 <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
                 <ButtonContainer>

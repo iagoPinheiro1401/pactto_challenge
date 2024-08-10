@@ -10,11 +10,14 @@ const GlobalStyle = createGlobalStyle`
     * {
       padding: 0;
       margin: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: ${props => props.theme.colors.primary};
+        background-color: ${props => props.theme.colors.primary};
+        overflow-x: hidden;
+        margin: 0;
     }
 `
 
