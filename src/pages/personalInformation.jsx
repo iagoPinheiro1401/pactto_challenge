@@ -13,8 +13,8 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 140px 0;
-    margin-left: ${props => props.isMenuOpen ? "500px" : "0"};
+    padding: 140px 0 50px 0;
+    margin-left: ${props => props.isMenuOpen ? "400px" : "20px"};
 `
 
 const ButtonsAndMenuContainer = styled.div`
@@ -46,7 +46,7 @@ const StyledList = styled(List)`
 const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
-    padding: 0 30px;
+    padding: 30px;
 `
 
 const InputsContainer = styled.div`
@@ -88,6 +88,26 @@ const StyledInputOther = styled.input`
   }
 `
 
+const HandleAndPasswordContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 70px;
+    font-size: 16px;
+    color: white;
+`
+
+const TextContainer = styled.div`
+    font-size: 12px;
+    font-weight: 500;
+    color: #c4c1c1;
+    margin: 20px 0 0 35px;
+`
+
+const Hiperlink = styled.a`
+    color: white;
+`
+
 export default function PersonalInformation() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -117,7 +137,16 @@ export default function PersonalInformation() {
                     <Checkbox label="Inspections"/>
                     <StyledInputOther placeholder="Other"/>
                 </CheckboxContainer>
+                <HandleAndPasswordContainer>
+                    <p>User handle and password</p>
+                    <Input placeholder="User"/>
+                    <Input placeholder="Password"/>
+                    <Input placeholder="Confirm passowrd"/>
+                </HandleAndPasswordContainer>
             </FormContainer>
+            <TextContainer>
+                To delete your Pactto account and remove your data permanently from all Pactto apps and services, please <Hiperlink href="google.com">click here.</Hiperlink>
+            </TextContainer>
         </Container>
     )
 }
