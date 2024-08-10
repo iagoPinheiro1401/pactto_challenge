@@ -137,7 +137,7 @@ export default function Menu() {
                 <MenuOptions src="/webLinksIcon" path="/webLinks">Web links to created</MenuOptions>
                 <MenuOptions src="/personaIcon" path="/personalInformation">Personal information</MenuOptions>
                 <MenuOptions src="/packagesIcon" path="/packages">Review packages for sale</MenuOptions>
-                <MenuOptions src="/pacttoPagesIcon">Pactto website</MenuOptions>
+                <MenuOptions src="/pacttoPagesIcon" path="/profile">Pactto website</MenuOptions>
                 <MenuOptions src="/referenceIcon">Reference video library</MenuOptions>
                 <MenuOptions src="/subscriptionIcon">Subscription</MenuOptions>
                 <MenuOptions src="/settingsIcon">Review settings</MenuOptions>
