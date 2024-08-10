@@ -3,6 +3,8 @@ import { List } from "@phosphor-icons/react"
 
 import LaunchButton from "@/components/buttons/LaunchButton"
 import TextBig from "@/components/tipography/textBig/TextBig"
+import TextMedium from "@/components/tipography/textMedium/TextMedium"
+import Input from "@/components/input/Input"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -56,6 +58,38 @@ const DisabledButton = styled.button`
     font-weight: 600;
 `
 
+const Text = styled.p`
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+`
+
+const Content = styled.div`
+    display: flex;
+    gap: 20px;
+`
+
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    margin-left: 30px;
+`
+
+const AvatarContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 50%;
+`
+
+const HeroContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+`
+
 export default function Profile() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -71,6 +105,18 @@ export default function Profile() {
                     <DisabledButton>SAVE</DisabledButton>
                 </ButtonContainer>
             </ButtonsAndMenuContainer>
+            <Content>
+                <Form>
+                    <HeroContainer>
+                        <Text>Hero</Text>
+                        <Input placeholder="Public name" big/>
+                        <Input placeholder="Headline" big/>
+                    </HeroContainer>
+                </Form>
+                <AvatarContainer>
+
+                </AvatarContainer>
+            </Content>
         </Container>
     )
 }

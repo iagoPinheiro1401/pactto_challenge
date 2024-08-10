@@ -3,7 +3,7 @@ import styled from "styled-components"
 const StyledInput = styled.input`
     background-color: #39393B;
     padding: 15px 20px;
-    max-width: 700px;
+    max-width: ${props => props.big ? "100%" : "700px"};
     border: none;
 
     ::placeholder {
@@ -20,8 +20,8 @@ const StyledInput = styled.input`
     }
 `
 
-export default function Input({ placeholder }) {
+export default function Input({ placeholder, big }) {
     return(
-        <StyledInput placeholder={placeholder}/>
+        <StyledInput placeholder={placeholder} big={big}/>
     )
 }
