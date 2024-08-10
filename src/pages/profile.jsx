@@ -3,6 +3,7 @@ import { List } from "@phosphor-icons/react"
 import { useState, useEffect } from "react"
 
 import LaunchButton from "@/components/buttons/LaunchButton"
+import GreenButton from "@/components/buttons/GreenButton"
 import TextBig from "@/components/tipography/textBig/TextBig"
 import Input from "@/components/input/Input"
 import Textarea from "@/components/textarea/Textarea"
@@ -80,11 +81,12 @@ const Form = styled.form`
     margin-left: 30px;
 `
 
-const AvatarContainer = styled.div`
+const AvatarContainer = styled.section`
     display: flex;
     flex-direction: column;
     margin-right: 20px;
     width: 50%;
+    gap: 20px;
 `
 
 const HeroContainer = styled.div`
@@ -117,6 +119,15 @@ const LabelAndInput = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2px;
+`
+
+const ProfileImgContainer = styled.div`
+    width: 100%;
+    background-color: #1C1B1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
 `
 
 export default function Profile() {
@@ -188,7 +199,12 @@ export default function Profile() {
                     </Section>
                 </Form>
                 <AvatarContainer>
-
+                    <Text>Avatar</Text>
+                    <ProfileImgContainer>
+                        <img src="/user-profile.png" width={160} height={160}/>
+                    </ProfileImgContainer>
+                    <Text>Carousel</Text>
+                    <GreenButton plus>ADD IMAGE</GreenButton>
                 </AvatarContainer>
             </Content>
         </Container>
