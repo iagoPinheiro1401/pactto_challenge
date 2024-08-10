@@ -3,8 +3,9 @@ import { List } from "@phosphor-icons/react"
 
 import LaunchButton from "@/components/buttons/LaunchButton"
 import TextBig from "@/components/tipography/textBig/TextBig"
-import TextMedium from "@/components/tipography/textMedium/TextMedium"
 import Input from "@/components/input/Input"
+import Textarea from "@/components/textarea/Textarea"
+import LabelMove from "@/components/label/LabelMove"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -12,8 +13,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 140px 0 50px 0;
-    margin-left: ${props => props.isMenuOpen ? "400px" : "20px"};
+    padding: 110px 0 50px 0;
 `
 
 const ButtonsAndMenuContainer = styled.header`
@@ -27,6 +27,7 @@ const ButtonsAndMenuContainer = styled.header`
     top: 0;
     z-index: 10000;
     background-color: ${props => props.theme.colors.primary};
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 `
 
 const MenuAndTextContainer = styled.div`
@@ -90,6 +91,32 @@ const HeroContainer = styled.div`
     gap: 20px;
 `
 
+const AboutMeSection = styled.section`
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+`
+
+const Section = styled.section`
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+`
+
+const TextareaContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`
+
+const LabelAndInput = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+`
+
 export default function Profile() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -112,6 +139,38 @@ export default function Profile() {
                         <Input placeholder="Public name" big/>
                         <Input placeholder="Headline" big/>
                     </HeroContainer>
+                    <AboutMeSection>
+                        <TextareaContainer>
+                            <Text>About Me</Text>
+                            <Textarea placeholder="About Me"/>
+                        </TextareaContainer>
+                        <Input placeholder="Expertise Title" big/>
+                        <LabelAndInput>
+                            <LabelMove>Expertise 1</LabelMove>
+                            <Input placeholder="Add expertise" big/>
+                        </LabelAndInput>
+                        <Input placeholder="Awards Title" big/>
+                        <LabelAndInput>
+                            <LabelMove>Award 1</LabelMove>
+                            <Input placeholder="Add award" big/>
+                        </LabelAndInput>
+                    </AboutMeSection>
+                    <Section>
+                        <Text>Give me a follow</Text>
+                        <LabelAndInput>
+                            <LabelMove>www.pactto.com</LabelMove>
+                            <Input placeholder="Add social media channel" big/>
+                        </LabelAndInput>
+                    </Section>
+                    <Section>
+                        <Text>YouTube video</Text>
+                        <Input placeholder="YouTube video URL" big/>
+                    </Section>
+                    <Section>
+                        <Text>Footer</Text>
+                        <Textarea placeholder="Quote"/>
+                        <Input placeholder="Quote author" big/>
+                    </Section>
                 </Form>
                 <AvatarContainer>
 
