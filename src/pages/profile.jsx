@@ -130,6 +130,10 @@ const ProfileImgContainer = styled.div`
     padding: 10px 0;
 `
 
+const ButtonWidth = styled.div`
+    max-width: 160px;
+`
+
 export default function Profile() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -204,7 +208,9 @@ export default function Profile() {
                         <img src="/user-profile.png" width={160} height={160}/>
                     </ProfileImgContainer>
                     <Text>Carousel</Text>
-                    <GreenButton plus>ADD IMAGE</GreenButton>
+                    <ButtonWidth>
+                        <GreenButton plus>ADD IMAGE</GreenButton>
+                    </ButtonWidth>
                 </AvatarContainer>
             </Content>
         </Container>

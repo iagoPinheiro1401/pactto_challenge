@@ -2,13 +2,12 @@ import styled from "styled-components"
 import { Plus } from "@phosphor-icons/react"
 
 const StyledButton = styled.button`
-    width: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     cursor: ${props => (props.disabled ? "default" : "pointer")};
-    padding: 17px 25px;
+    padding: 15px 25px;
     background-color: ${props => props.disabled ? "#464545" : "#1DBBA5"};
     border: none;
     border-radius: 50px;
