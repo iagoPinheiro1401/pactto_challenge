@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { List } from "@phosphor-icons/react"
+import { useState, useEffect } from "react"
 
 import LaunchButton from "@/components/buttons/LaunchButton"
 import TextBig from "@/components/tipography/textBig/TextBig"
@@ -27,7 +28,8 @@ const ButtonsAndMenuContainer = styled.header`
     top: 0;
     z-index: 10000;
     background-color: ${props => props.theme.colors.primary};
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: ${props => (props.scroll ? '0 4px 8px rgba(0, 0, 0, 0.3)' : 'none')};
+    transition: box-shadow 0.2s ease;
 `
 
 const MenuAndTextContainer = styled.div`
@@ -120,9 +122,22 @@ const LabelAndInput = styled.div`
 export default function Profile() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
+    const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScroll(window.scrollY > 50); // Ajuste o valor conforme necessário
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Limpeza do listener ao desmontar o componente
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [])
+
     return(
         <Container isMenuOpen={isMenuOpen}>
-            <ButtonsAndMenuContainer>
+            <ButtonsAndMenuContainer scroll={scroll}>
                 <MenuAndTextContainer>
                     <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
                     <TextBig>Please edit your Pactto page below.</TextBig>
