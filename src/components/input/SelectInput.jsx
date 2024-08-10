@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { CaretDown } from '@phosphor-icons/react'
 
 const DropdownContainer = styled.div`
-  max-width: 735px;
+  max-width: 700px;
   background-color: #39393B;
   padding: 0 2px;
   color: white;

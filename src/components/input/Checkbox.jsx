@@ -10,8 +10,8 @@ const Container = styled.div`
 `
 
 const StyledCheckbox = styled.div`
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border: ${props => (props.select ? "solid 2px #1994FC" : "solid 2px gray")};
     border-radius: 3px;
     background-color: ${props => (props.select ? "#1994FC" : "transparent")};
