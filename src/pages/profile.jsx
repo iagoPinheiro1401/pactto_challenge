@@ -42,6 +42,10 @@ const ButtonContainer = styled.div`
     margin-right: ${props => props.isMenuOpen ? "400px" : "0"};
     justify-content: end;
     padding: 0 50px;
+
+    @media (max-width: 1280px) {
+        margin-right: 0;
+    }
 `
 
 const StyledList = styled(List)`
@@ -148,7 +152,7 @@ export default function Profile() {
     }, [])
 
     return(
-        <StyledContainer>
+        <StyledContainer isMenuOpen={isMenuOpen}>
             <ButtonsAndMenuContainer scroll={scroll}>
                 <MenuAndTextContainer>
                     <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>

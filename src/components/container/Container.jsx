@@ -8,6 +8,16 @@ const StyledContainer = styled.div`
   padding: 40px 30px;
   width: 100%;
   margin-left: ${props => props.isMenuOpen ? "380px" : "0px"};
+  height: 100vh;
+  z-index: 999;
+
+  @media (max-width: 1280px) {
+    ${props => props.isMenuOpen && `
+        margin-left: 0;
+        overflow-y: hidden;
+        pointer-events: none;
+    `}
+  }
 `
 
 export default function Container({ children }) {

@@ -16,7 +16,7 @@ const Content = styled.div`
 const ButtonsAndMenuContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: ${props => (props.show ? 'end' : 'space-between')};
+    justify-content: ${props => (props.show ? 'initial' : 'space-between')};
     gap: 10px;
     width: 100%;
     padding: 20px 0 20px 30px;
@@ -29,7 +29,7 @@ const ButtonsAndMenuContainer = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     gap: 10px;
-    width: 80%;
+    width: 100%;
     justify-content: end;
     padding: 0 100px;
 `
