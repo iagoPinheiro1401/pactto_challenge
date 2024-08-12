@@ -1,8 +1,8 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import theme from "@/theme"
-import { useRouter } from "next/router"
 
 import Menu from "@/components/menu/Menu"
+import Container from "@/components/container/Container"
 
 import { MenuProvider } from "@/contexts/MenuContext"
 
@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
 `
 
 function App({ Component, pageProps }) {
-  const router = useRouter()
   
   return (
     <ThemeProvider theme={theme}>
@@ -30,7 +29,9 @@ function App({ Component, pageProps }) {
     <MenuProvider>
       <div style={{ display: 'flex' }}>
         <Menu />
+        <Container>
           <Component {...pageProps} />
+        </Container>
       </div>
     </MenuProvider>
   </ThemeProvider>

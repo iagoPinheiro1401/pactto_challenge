@@ -1,0 +1,21 @@
+import styled from "styled-components"
+import { useMenu } from "@/hooks/useMenu"
+
+const StyledContainer = styled.div`
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding: 40px 30px;
+  width: 100%;
+  margin-left: ${props => props.isMenuOpen ? "380px" : "0px"};
+`
+
+export default function Container({ children }) {
+    const { isMenuOpen } = useMenu()
+
+    return(
+        <StyledContainer isMenuOpen={isMenuOpen}>
+            {children}
+        </StyledContainer>
+    )
+}

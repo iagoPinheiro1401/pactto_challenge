@@ -9,12 +9,8 @@ import Checkbox from "@/components/input/Checkbox"
 
 import { useMenu } from "@/hooks/useMenu"
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 140px 0 50px 0;
-    margin-left: ${props => props.isMenuOpen ? "400px" : "20px"};
+const Content = styled.div`
+    padding-top: 40px;
 `
 
 const ButtonsAndMenuContainer = styled.div`
@@ -33,9 +29,9 @@ const ButtonsAndMenuContainer = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     gap: 10px;
-    width: 74%;
+    width: 80%;
     justify-content: end;
-    padding: 0 50px;
+    padding: 0 100px;
 `
 
 const StyledList = styled(List)`
@@ -112,7 +108,7 @@ export default function PersonalInformation() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return(
-        <Container isMenuOpen={isMenuOpen}>
+        <Content>
             <ButtonsAndMenuContainer>
                 <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
                 <ButtonContainer>
@@ -147,6 +143,6 @@ export default function PersonalInformation() {
             <TextContainer>
                 To delete your Pactto account and remove your data permanently from all Pactto apps and services, please <Hiperlink href="google.com">click here.</Hiperlink>
             </TextContainer>
-        </Container>
+        </Content>
     )
 }

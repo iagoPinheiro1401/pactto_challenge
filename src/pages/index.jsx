@@ -10,15 +10,6 @@ import SearchBar from "@/components/searchBar/SearchBar"
 
 import { useMenu } from "@/hooks/useMenu"
 
-const Container = styled.header`
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
-  padding: 40px 30px;
-  width: 100%;
-  margin-left: ${props => props.isMenuOpen ? "400px" : "0"};
-`
-
 const StatusContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -59,7 +50,7 @@ function HomePage () {
   const { isMenuOpen, toggleMenu } = useMenu()
 
   return (
-    <Container isMenuOpen={isMenuOpen}>
+    <>
         <TextBig>Hey IAGO, welcome to Pactto!</TextBig>
         <StatusContainer>
 
@@ -93,7 +84,7 @@ function HomePage () {
         </UploadsContainer>
 
         <SearchBar placeholder="Search"/>
-    </Container>
+    </>
   )
 }
 

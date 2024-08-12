@@ -6,15 +6,6 @@ import SearchBar from "@/components/searchBar/SearchBar"
 
 import { useMenu } from "@/hooks/useMenu"
 
-const Container = styled.header`
-  display: flex;
-  gap: 140px;
-  flex-direction: column;
-  padding: 40px 30px;
-  width: 100%;
-  margin-left: ${props => props.isMenuOpen ? "400px" : "0"};
-`
-
 const TextAndSearch = styled.div`
     display: flex;
     flex-direction: column;
@@ -36,7 +27,7 @@ export default function WebLinks() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return(
-        <Container isMenuOpen={isMenuOpen}>
+        <>
             <TextAndSearch>
                 <MenuAndTextContainer>
                     <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
@@ -52,6 +43,6 @@ export default function WebLinks() {
                 </MenuAndTextContainer>
                 <SearchBar placeholder="Search"/>
             </TextAndSearch>
-        </Container>
+        </>
     )
 }

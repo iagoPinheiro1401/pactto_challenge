@@ -11,12 +11,8 @@ import LabelMove from "@/components/label/LabelMove"
 
 import { useMenu } from "@/hooks/useMenu"
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 110px 0 50px 0;
-    margin-left: ${props => props.isMenuOpen ? "390px" : "0"};
+const StyledContainer = styled.div`
+    padding-top: 70px;
 `
 
 const ButtonsAndMenuContainer = styled.header`
@@ -25,7 +21,7 @@ const ButtonsAndMenuContainer = styled.header`
     justify-content: ${props => (props.show ? 'end' : 'space-between')};
     gap: 10px;
     width: 100%;
-    padding: 20px 0 20px 30px;
+    padding: 20px 30px;
     position: fixed;
     top: 0;
     z-index: 10000;
@@ -152,7 +148,7 @@ export default function Profile() {
     }, [])
 
     return(
-        <Container isMenuOpen={isMenuOpen}>
+        <StyledContainer>
             <ButtonsAndMenuContainer scroll={scroll}>
                 <MenuAndTextContainer>
                     <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
@@ -214,6 +210,6 @@ export default function Profile() {
                     </ButtonWidth>
                 </AvatarContainer>
             </Content>
-        </Container>
+        </StyledContainer>
     )
 }

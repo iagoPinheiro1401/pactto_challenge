@@ -5,13 +5,11 @@ import GreenButton from "@/components/buttons/GreenButton"
 
 import { useMenu } from "@/hooks/useMenu"
 
-const Container = styled.div`
+const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
-    margin-left: ${props => props.isMenuOpen ? "400px" : "0px"};
 `
 
 const MenuAndAddButtonContainer = styled.div`
@@ -35,7 +33,7 @@ export default function Packages() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return(
-        <Container isMenuOpen={isMenuOpen}>
+        <Content>
             <MenuAndAddButtonContainer>
                 <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
                 <GreenButton plus>ADD PACKAGE</GreenButton>
@@ -44,6 +42,6 @@ export default function Packages() {
                 <GreenButton disabled>SAVE CHANGES</GreenButton>
                 <GreenButton>PAYMENT DETAILS</GreenButton>
             </ButtonsContainer>
-        </Container>
+        </Content>
     )
 }
