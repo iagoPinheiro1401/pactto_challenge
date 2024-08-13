@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import { List } from "@phosphor-icons/react"
+import { Check, List } from "@phosphor-icons/react"
 
 import TextBig from "@/components/tipography/textBig/TextBig"
 import ResetButton from "@/components/buttons/changesButtons/ResetButton"
-import GreenButton from "@/components/buttons/GreenButton"
+import Checkbox from "@/components/input/Checkbox"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -48,6 +48,13 @@ const StyledButton = styled.button`
     color: black;
 `
 
+const CheckboxContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 30px 0 0 35px;
+`
+
 export default function ReviewSettings() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -63,6 +70,15 @@ export default function ReviewSettings() {
                     <StyledButton>SAVE CHANGES</StyledButton>
                 </ButtonsContainer>
             </ButtonsAndMenuContainer>
+            <CheckboxContainer>
+                <Checkbox label="Show logo"/>
+                <Checkbox label="Start with microphone enabled"/>
+                <Checkbox label="Start with camera enabled"/>
+                <Checkbox label="Videos loaded start muted"/>
+                <Checkbox label="Notes disappear after 1 second"/>
+                <Checkbox label="Trackpad: pinch to zoom"/>
+                <Checkbox label="Trackpad: reposition with 2-finger swipe"/>
+            </CheckboxContainer>
         </>
     )
 }
