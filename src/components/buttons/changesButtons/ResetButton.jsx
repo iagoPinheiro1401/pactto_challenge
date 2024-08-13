@@ -15,10 +15,10 @@ const StyledButton = styled.button`
     }
 `
 
-export default function ResetButton() {
+export default function ResetButton({ children }) {
     return(
         <StyledButton>
-            RESET CHANGES
+            {children}
         </StyledButton>
     )
 }

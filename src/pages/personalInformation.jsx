@@ -112,7 +112,7 @@ export default function PersonalInformation() {
             <ButtonsAndMenuContainer>
                 <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
                 <ButtonContainer>
-                    <ResetButton />
+                    <ResetButton >RESET CHANGES</ResetButton>
                     <SaveButton />
                 </ButtonContainer>
             </ButtonsAndMenuContainer>
