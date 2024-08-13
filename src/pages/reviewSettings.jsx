@@ -2,8 +2,10 @@ import styled from "styled-components"
 import { Check, List } from "@phosphor-icons/react"
 
 import TextBig from "@/components/tipography/textBig/TextBig"
+import TextMedium from "@/components/tipography/textMedium/TextMedium"
 import ResetButton from "@/components/buttons/changesButtons/ResetButton"
 import Checkbox from "@/components/input/Checkbox"
+import RangeInput from "@/components/input/RangeInput"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -55,6 +57,13 @@ const CheckboxContainer = styled.div`
     margin: 30px 0 0 35px;
 `
 
+const RangeInputContainer = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0 0 20px;
+`
+
 export default function ReviewSettings() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -79,6 +88,10 @@ export default function ReviewSettings() {
                 <Checkbox label="Trackpad: pinch to zoom"/>
                 <Checkbox label="Trackpad: reposition with 2-finger swipe"/>
             </CheckboxContainer>
+            <RangeInputContainer>
+                <TextMedium color="white">Brush size for tools</TextMedium>
+                <RangeInput />
+            </RangeInputContainer>
         </>
     )
 }
