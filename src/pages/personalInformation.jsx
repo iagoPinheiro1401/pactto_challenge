@@ -29,7 +29,7 @@ const ButtonsAndMenuContainer = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     gap: 10px;
-    width: 100%;
+    width: ${props => props.isMenuOpen ? "80%" : "100%"};
     justify-content: end;
     padding: 0 100px;
 `
@@ -111,7 +111,7 @@ export default function PersonalInformation() {
         <Content>
             <ButtonsAndMenuContainer>
                 <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
-                <ButtonContainer>
+                <ButtonContainer isMenuOpen={isMenuOpen}>
                     <ResetButton >RESET CHANGES</ResetButton>
                     <SaveButton />
                 </ButtonContainer>
