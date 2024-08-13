@@ -140,7 +140,7 @@ export default function Menu() {
                 <MenuOptions src="/pacttoPagesIcon" path="/profile">Pactto website</MenuOptions>
                 <MenuOptions src="/referenceIcon" path="/library">Reference video library</MenuOptions>
                 <MenuOptions src="/subscriptionIcon" path="subscription">Subscription</MenuOptions>
-                <MenuOptions src="/settingsIcon">Review settings</MenuOptions>
+                <MenuOptions src="/settingsIcon" path="/reviewSettings">Review settings</MenuOptions>
             </StyledNav>
             <ButtonContainer>
                 <LogoutButton />
