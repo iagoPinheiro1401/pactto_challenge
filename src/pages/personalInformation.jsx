@@ -35,7 +35,7 @@ const ButtonsAndMenuContainer = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     gap: 10px;
-    width: ${props => props.isMenuOpen ? "80%" : "100%"};
+    width: ${props => props.isMenuOpen ? "75%" : "100%"};
     justify-content: end;
     padding: 0 100px;
 
