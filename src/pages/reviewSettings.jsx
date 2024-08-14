@@ -106,13 +106,13 @@ export default function ReviewSettings() {
                 </ButtonsContainer>
             </ButtonsAndMenuContainer>
             <CheckboxContainer>
-                <Checkbox label="Show logo"/>
-                <Checkbox label="Start with microphone enabled"/>
-                <Checkbox label="Start with camera enabled"/>
-                <Checkbox label="Videos loaded start muted"/>
-                <Checkbox label="Notes disappear after 1 second"/>
-                <Checkbox label="Trackpad: pinch to zoom"/>
-                <Checkbox label="Trackpad: reposition with 2-finger swipe"/>
+                <Checkbox label="Show logo" green/>
+                <Checkbox label="Start with microphone enabled" green/>
+                <Checkbox label="Start with camera enabled" green/>
+                <Checkbox label="Videos loaded start muted" green/>
+                <Checkbox label="Notes disappear after 1 second" green/>
+                <Checkbox label="Trackpad: pinch to zoom" green/>
+                <Checkbox label="Trackpad: reposition with 2-finger swipe" green/>
             </CheckboxContainer>
             <RangeInputContainer>
                 <TextMedium color="white">Brush size for tools</TextMedium>

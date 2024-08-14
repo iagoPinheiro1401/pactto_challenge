@@ -12,16 +12,17 @@ const Container = styled.div`
 const StyledCheckbox = styled.div`
     width: 20px;
     height: 20px;
-    border: ${props => (props.select ? "solid 2px #1994FC" : "solid 2px gray")};
+    border: ${(props) => props.select ?( props.green ? 'solid 2px #1DBBA5' : 'solid 2px #1994FC') : 'solid 2px gray'};
     border-radius: 3px;
-    background-color: ${props => (props.select ? "#1994FC" : "transparent")};
+    background-color: ${props => (props.select ? ( props.green ? "#1DBBA5" : "#1994FC") : "transparent")};
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    cursor: pointer;
 `
 
-export default function Checkbox({ label }) {
+export default function Checkbox({ label, green }) {
     const [isSelect, setIsSelect] = useState(false)
 
     const handleSelect = () => {
@@ -30,7 +31,7 @@ export default function Checkbox({ label }) {
 
     return(
         <Container>
-            <StyledCheckbox onClick={handleSelect} select={isSelect}>
+            <StyledCheckbox onClick={handleSelect} select={isSelect} green={green}>
                 {isSelect && <p>✓</p>}
             </StyledCheckbox>
             <label>{label}</label>
