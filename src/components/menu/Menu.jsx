@@ -48,7 +48,7 @@ const StyledX = styled.div`
 
 const StyledText = styled.p`
     color: #545454;
-    margin-left: 38px;
+    margin: 20px 0 0 38px;
     font-weight: 700;
     font-size: 14px;
 `
@@ -58,6 +58,7 @@ const ProfileContainer = styled.div`
     align-items: center;
     height: 100px;
     padding: 10px 0 0 30px;
+    gap: 10px;
 `
 
 const PacttoProContainer = styled.div`
@@ -79,6 +80,8 @@ const TextUpgrate = styled.p`
     font-size: 12px;
     text-decoration: underline;
     color: rgb(203, 203, 203);
+    cursor: pointer;
+    margin-top: 10px;
 `
 
 const UserNameContainer = styled.div`
