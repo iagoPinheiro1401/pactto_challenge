@@ -10,7 +10,7 @@ import Checkbox from "@/components/input/Checkbox"
 import { useMenu } from "@/hooks/useMenu"
 
 const Content = styled.div`
-    padding-top: 40px;
+    padding: 40px 0;
 `
 
 const ButtonsAndMenuContainer = styled.div`
@@ -24,6 +24,12 @@ const ButtonsAndMenuContainer = styled.div`
     top: 0;
     z-index: 10000;
     background-color: ${props => props.theme.colors.primary};
+
+    @media (max-width: 1280px) {
+        padding: 10px 0;
+        gap: 30px;
+        justify-content: center;
+    }
 `
 
 const ButtonContainer = styled.div`
@@ -32,11 +38,17 @@ const ButtonContainer = styled.div`
     width: ${props => props.isMenuOpen ? "80%" : "100%"};
     justify-content: end;
     padding: 0 100px;
+
+    @media (max-width: 1280px) {
+        width: 250px;
+        padding: 0;
+        justify-content: center;
+    }
 `
 
 const StyledList = styled(List)`
-  cursor: pointer;
-  display: ${props => (props.show ? 'block' : 'none')};
+    cursor: pointer;
+    display: ${props => (props.show ? 'block' : 'none')};
 `
 
 const FormContainer = styled.form`
@@ -81,6 +93,10 @@ const StyledInputOther = styled.input`
     caret-color: ${props => props.theme.colors.green};
     border-color: ${props => props.theme.colors.green};
     outline: none;
+  }
+
+  @media (max-width: 1280px) {
+    width: 100%;
   }
 `
 
