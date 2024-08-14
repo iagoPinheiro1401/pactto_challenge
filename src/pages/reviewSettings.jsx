@@ -7,6 +7,7 @@ import ResetButton from "@/components/buttons/changesButtons/ResetButton"
 import Checkbox from "@/components/input/Checkbox"
 import RangeInput from "@/components/input/RangeInput"
 import NoteColor from "../components/noteColor/NoteColor"
+import SelectOptions from "@/components/selectOptions/SelectOptions"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -77,6 +78,18 @@ const NoteColorContainer = styled.div`
     gap: 20px;
 `
 
+const SelectContainer = styled.div`
+    display: flex;
+    gap: 30px;
+    margin-left: 36px;
+`
+
+const TextAndSelect = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`
+
 export default function ReviewSettings() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -114,6 +127,21 @@ export default function ReviewSettings() {
                     <NoteColor initialText="#00000" text="Color 4"/>
                 </NoteColorContainer>
             </TextAndNote>
+            <SelectContainer>
+                <TextAndSelect>
+                    <TextMedium color="white">Camera</TextMedium>
+                    <SelectOptions/>
+                </TextAndSelect>
+                <TextAndSelect>
+                    <TextMedium color="white">Microphone</TextMedium>
+                    <SelectOptions/>
+                </TextAndSelect>
+                <TextAndSelect>
+                    <TextMedium color="white">Speakers
+                    </TextMedium>
+                    <SelectOptions/>
+                </TextAndSelect>
+            </SelectContainer>
         </>
     )
 }
