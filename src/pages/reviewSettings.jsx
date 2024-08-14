@@ -76,12 +76,21 @@ const TextAndNote = styled.div`
 const NoteColorContainer = styled.div`
     display: flex;
     gap: 20px;
+
+    @media (max-width: 1280px) {
+        flex-direction: column;
+    }
 `
 
 const SelectContainer = styled.div`
     display: flex;
     gap: 30px;
     margin-left: 36px;
+
+    @media (max-width: 1280px) {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
 `
 
 const TextAndSelect = styled.div`
