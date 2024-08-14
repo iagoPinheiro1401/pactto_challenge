@@ -17,6 +17,7 @@ const StyledContainer = styled.div`
         overflow-y: hidden;
         pointer-events: none;
     `}
+    padding: 40px 10px;
   }
 `
 

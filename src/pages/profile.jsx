@@ -28,6 +28,11 @@ const ButtonsAndMenuContainer = styled.header`
     background-color: ${props => props.theme.colors.primary};
     box-shadow: ${props => (props.scroll ? '0 4px 8px rgba(0, 0, 0, 0.3)' : 'none')};
     transition: box-shadow 0.2s ease;
+
+    @media (max-width: 1280px) {
+        flex-direction: column; 
+        padding: 20px 0;
+    }
 `
 
 const MenuAndTextContainer = styled.div`
@@ -45,6 +50,7 @@ const ButtonContainer = styled.div`
 
     @media (max-width: 1280px) {
         margin-right: 0;
+        justify-content: center;
     }
 `
 
@@ -72,6 +78,14 @@ const Text = styled.p`
 const Content = styled.div`
     display: flex;
     gap: 20px;
+
+    @media (max-width: 1280px) {
+        flex-direction: column-reverse;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
 `
 
 const Form = styled.form`
@@ -80,6 +94,11 @@ const Form = styled.form`
     gap: 20px;
     width: 50%;
     margin-left: 30px;
+
+    @media (max-width: 1280px) {
+        width: 100%;
+        margin: 0 10px;
+    }
 `
 
 const AvatarContainer = styled.section`
@@ -88,6 +107,11 @@ const AvatarContainer = styled.section`
     margin-right: 20px;
     width: 50%;
     gap: 20px;
+
+    @media (max-width: 1280px) {
+        width: 100%;
+        margin: 0 10px;
+    }
 `
 
 const HeroContainer = styled.div`
