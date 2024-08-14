@@ -5,7 +5,6 @@ const StyledStatus = styled.div`
     border-radius: 10px;
     background-color: ${props => props.children == 'DONE' ? props.theme.colors.green : 'rgba(252, 252, 252, 0.2)'};
     color: white;
-    width: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
