@@ -6,6 +6,7 @@ import TextMedium from "@/components/tipography/textMedium/TextMedium"
 import ResetButton from "@/components/buttons/changesButtons/ResetButton"
 import Checkbox from "@/components/input/Checkbox"
 import RangeInput from "@/components/input/RangeInput"
+import NoteColor from "../components/noteColor/NoteColor"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -64,6 +65,18 @@ const RangeInputContainer = styled.div`
     margin: 10px 0 0 20px;
 `
 
+const TextAndNote = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 36px;
+`
+
+const NoteColorContainer = styled.div`
+    display: flex;
+    gap: 20px;
+`
+
 export default function ReviewSettings() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
@@ -92,6 +105,15 @@ export default function ReviewSettings() {
                 <TextMedium color="white">Brush size for tools</TextMedium>
                 <RangeInput />
             </RangeInputContainer>
+            <TextAndNote>
+                <TextMedium color="white">Note color options</TextMedium>
+                <NoteColorContainer>
+                    <NoteColor initialText="#FF0000" text="Color 1"/>
+                    <NoteColor initialText="#008000" text="Color 2"/>
+                    <NoteColor initialText="#FFFFF" text="Color 3"/>
+                    <NoteColor initialText="#00000" text="Color 4"/>
+                </NoteColorContainer>
+            </TextAndNote>
         </>
     )
 }
