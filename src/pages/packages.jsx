@@ -1,11 +1,22 @@
 import styled from "styled-components"
 import { List } from "@phosphor-icons/react"
+import { Trash } from "@phosphor-icons/react"
 
 import GreenButton from "@/components/buttons/GreenButton"
+import AddPackage from "@/components/addPackage/AddPackage"
+import TextMedium from "@/components/tipography/textMedium/TextMedium"
+import Checkbox from "@/components/input/Checkbox"
 
 import { useMenu } from "@/hooks/useMenu"
 
-const Content = styled.div`
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+`
+
+const Header = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,19 +40,45 @@ const StyledList = styled(List)`
   display: ${props => (props.show ? 'block' : 'none')};
 `
 
+const ButtonsPackage = styled.div`
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: 10px;
+`
+
+const LabelAndButton = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+`
+
 export default function Packages() {
     const { isMenuOpen, toggleMenu } = useMenu()
 
     return(
-        <Content>
-            <MenuAndAddButtonContainer>
-                <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
-                <GreenButton plus>ADD PACKAGE</GreenButton>
-            </MenuAndAddButtonContainer>
-            <ButtonsContainer>
-                <GreenButton disabled>SAVE CHANGES</GreenButton>
-                <GreenButton>PAYMENT DETAILS</GreenButton>
-            </ButtonsContainer>
-        </Content>
+        <Container>
+            <Header>
+                <MenuAndAddButtonContainer>
+                    <StyledList show={!isMenuOpen} onClick={toggleMenu} size={27} color="#ffff" weight="bold"/>
+                    <GreenButton plus>ADD PACKAGE</GreenButton>
+                </MenuAndAddButtonContainer>
+                <ButtonsContainer>
+                    <GreenButton disabled>SAVE CHANGES</GreenButton>
+                    <GreenButton>PAYMENT DETAILS</GreenButton>
+                </ButtonsContainer>
+            </Header>
+            <ButtonsPackage>
+                <LabelAndButton>
+                    <TextMedium>Package in unpublished</TextMedium>
+                    <Checkbox green/>
+                </LabelAndButton>
+                <LabelAndButton>
+                    <TextMedium>Delete package</TextMedium>
+                    <Trash size={32} weight="bold" color="gray"/>
+                </LabelAndButton>
+            </ButtonsPackage>
+            <AddPackage />
+        </Container>
     )
 }

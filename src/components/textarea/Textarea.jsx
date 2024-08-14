@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const StyledTextarea = styled.textarea`
     width: 100%;
-    height: 200px;
+    height: ${props => props.heigth ? props.heigth : '200px'};
     background-color: #39393B;
     padding: 10px 15px;
     border: none;
@@ -22,8 +22,8 @@ const StyledTextarea = styled.textarea`
     }
 `
 
-export default function Textarea({ placeholder }) {
+export default function Textarea({ placeholder, heigth }) {
     return(
-        <StyledTextarea placeholder={placeholder}/>
+        <StyledTextarea placeholder={placeholder} heigth={heigth}/>
     )
 }
