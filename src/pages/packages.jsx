@@ -6,6 +6,7 @@ import GreenButton from "@/components/buttons/GreenButton"
 import AddPackage from "@/components/addPackage/AddPackage"
 import TextMedium from "@/components/tipography/textMedium/TextMedium"
 import Checkbox from "@/components/input/Checkbox"
+import ToggleButton from "@/components/buttons/ToggleButton"
 
 import { useMenu } from "@/hooks/useMenu"
 
@@ -71,7 +72,7 @@ export default function Packages() {
             <ButtonsPackage>
                 <LabelAndButton>
                     <TextMedium>Package in unpublished</TextMedium>
-                    <Checkbox green/>
+                    <ToggleButton/>
                 </LabelAndButton>
                 <LabelAndButton>
                     <TextMedium>Delete package</TextMedium>
